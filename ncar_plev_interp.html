@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <title>Aman Gupta - Courant Institute, NYU</title>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+                <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        </head>
+        <body>
+	
+		<p>
+		I cooked up the following NCL script to convert full 3D model output from sigma-pressure hybrid coordinates to user defined pure-pressure coordinates. The script uses the inbuilt vinth2p() function for interpolation. While it is also possible to interpolate the whole file (with several time slices) at once, to ensure efficient memory usage, in this script interpolatation is implemented one time-slice at a time. The "efficient" method to write the interpolated variables to the netCDF files as described on the <a href="https://www.ncl.ucar.edu/Applications/write_netcdf.shtml" target="_blank"> NCAR website </a> has been used, thus ensuring speed. A 'sequence' of well numbered files can be converted at once. I have extensively used this script to interpolate my model outputs onto pressure coordinates.
+	
+	<br /><br />
+	<a href="files/interp_ncar.ncl">Click to Download</a>
+		</p>
+	</body>
+</html>
