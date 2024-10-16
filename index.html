@@ -3,11 +3,54 @@
 <html>
 	<head>
 		<style>
+			body {
+				margin: 0;
+				height: 200vh; /* Extend the body height for scrolling */
+				display: flex; /* Use flexbox for layout */
+				flex-direction: column; /* Stack elements vertically */
+			}
 			.custom-list {
 				font-size: inherit; /* Inherit font size from parent */
 				list-style-type: disc; /* Use disc bullets */
 				margin-left: 20px; /* Indent the list */
 			}
+			/* New gradient styles */
+			#header {
+				background: linear-gradient(to right, #ff7e5f, #feb47b); /* Initial gradient */
+				min-height: 200px; /* Set a minimum height for visibility */
+				display: flex; /* Use flexbox to center content */
+				align-items: center; /* Center content vertically */
+				justify-content: center; /* Center content horizontally */
+				color: white; /* Change text color for better contrast */
+				transition: background 0.5s; /* Smooth transition for background change */
+				width: 100%; /* Full width */
+			}
+			#main {
+				flex: 1; /* Allow main content to take available space */
+				padding: 20px; /* Add some padding */
+				display: flex; /* Use flexbox for centering */
+				justify-content: center; /* Center horizontally */
+				align-items: center; /* Center vertically */
+				flex-direction: column; /* Stack elements vertically */
+			}
+			.intro {
+				text-align: center; /* Center text */
+				font-size: 1.5em; /* Larger font size */
+				max-width: 800px; /* Limit width for better readability */
+				margin: 0 auto; /* Center the intro section */
+			}
+
+            .lazy-load {
+                opacity: 0; /* Start fully transparent */
+                transition: opacity 0.9s ease-out; /* Smooth transition */
+            }
+
+            .lazy-load.visible {
+                opacity: 1; /* Fully visible when scrolled */
+            }
+
+			/*modal
+			/* You can add more gradient styles for other sections as needed */
 		</style>
 		<title>Akshat Gupta - Tech Lead, Machine Learning | Glance InMobi Group |Kaggle Competitions Expert | IIT Kharagpur</title>
 
@@ -57,33 +100,23 @@
 			<div id="main">
 
 				<!-- One -->
-					<section id="one">
-						<!--
-						<header class="major">
-							<h2>Welcome to my webspace</h2>
-						</header>
-						-->
-							<p>I work as Tech Lead, Machine Learning at <a href="https://glance.inmobi.com/" target="_blank">Glance InMobi Group</a>. I lead a team of 10+ engineers and work on building products using Deep Learning and Computer Vision in two broad domains - Recommendation Systems and Generative AI.<br /><br />
-						
-							Prior to this, I worked at <a href="https://www.societegenerale.com/en" target="_blank"> Societe Generale </a> as Software Engineer, designing APIs for Datalake to store financial deals made by the company, historize the financial deals to run ML models. <br /><br />
-
-							I received my Bachelors Degree from the Department of Electrical Engineering, <a href="https://www.ee.iitkgp.ac.in/" target="_blank">Indian Institute of Technology, Kharagpur </a>
-
-
-							<b>Email:</b> I can be reached at : akshat |dot| ag1097 |at| gmail |dot| com, or akshat |dot| gupta [at] inmobi [dot] com</p>
-
-							
-							<b>Please refer to my <a href="https://docs.google.com/document/d/1RHjazQL52NRS8fcT0-Qjx5inPcKjEY4-7-pzeByzzNM/edit?usp=sharing" target="_blank"></b> CV</b></a> and my <a href="https://www.researchgate.net/profile/Akshat-Gupta-13" target="_blank"><b>Research Profile</b></a> and <a href="https://www.kaggle.com/akshatgupta2810" target="_blank">Kaggle Profile </a> for details. Please contact me for access to any of my publications behind a paywall </b>							
-					</section>
+					<article class="intro visible">
+						<h2>Computer Vision Enthusiast | Kaggle Competitions Expert | IIT Kharagpur</h2>
+						<p>I work as Tech Lead, Machine Learning at <a href="https://glance.inmobi.com/" target="_blank">Glance InMobi Group</a>.</p>
+						<p>I lead a team of 10+ engineers and work on building products using Deep Learning and Computer Vision in two broad domains - Recommendation Systems and Generative AI.</p>
+						<p>Prior to this, I worked at <a href="https://www.societegenerale.com/en" target="_blank"> Societe Generale </a> as Software Engineer, designing APIs for Datalake to store financial deals made by the company, historize the financial deals to run ML models.</p>
+						<p>I received my Bachelors Degree from the Department of Electrical Engineering, <a href="https://www.ee.iitkgp.ac.in/" target="_blank">Indian Institute of Technology, Kharagpur </a></p>
+						<p><b>Email:</b> I can be reached at : akshat |dot| ag1097 |at| gmail |dot| com, or akshat |dot| gupta [at] inmobi [dot] com</p>
+						<p><b>Please refer to my <a href="https://docs.google.com/document/d/1RHjazQL52NRS8fcT0-Qjx5inPcKjEY4-7-pzeByzzNM/edit?usp=sharing" target="_blank"></b> CV</b></a> and my <a href="https://www.researchgate.net/profile/Akshat-Gupta-13" target="_blank"><b>Research Profile</b></a> and <a href="https://www.kaggle.com/akshatgupta2810" target="_blank">Kaggle Profile </a> for details. Please contact me for access to any of my publications behind a paywall </b></p>
+					</article>
 
 				<!-- Two -->
-					<section id="two">
-
+					<article id="two">
 
 						<h2>Projects and Outreach</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/genai_2024.png" class="image fit thumb" ><img src="images/genai_2024.png" alt="" height="170"/></a>
+								<a href="images/genai_2024.png" class="image fit thumb poptrox" ><img src="images/genai_2024.png" alt="" height="170"/></a>
 								<h3>Mentor for Gen AI Exchange by Google for Glance Track</h3> 
 								<p>Develop an AI-powered solution that can accurately detect cancer at an early stage using [specific data type, e.g. medical images, genomic data, electronic health records]. The solution should be able to identify high-risk patients and alert healthcare providers for further screening and classify cancer types and stages with high accuracy. The goal is to improve cancer detection rates and enhance patient outcomes through early intervention </p>
 								<p><a href="https://devfolio.co/google-genaiexchange/challenges" target="_blank">[link]</a>	
@@ -99,19 +132,22 @@
 
 
 
-							<article class="col-6 col-12-xsmall work-item"><iframe  src="https://player.vimeo.com/video/893614428?h=cdb29e89bc"  height="170" class="image fit thumb" allowfullscreen></iframe>
+							<article class="col-6 col-12-xsmall work-item lazy-load">
+								<button class="image fit thumb poptrox">
+									<iframe src="https://player.vimeo.com/video/893614428?h=cdb29e89bc" height="170" class="image fit thumb" allowfullscreen></iframe>
+								</button>
 								<h3>Video Clip Generation.</h3>
 								<p>
 									1.Faster Whisper using CTranslate2 for audio transcription. <br> 
 									2.BLIP and Git for Image Captioning.<br> 
 										3.Vilt for Visual Question Answering.<br> 
 											4.Color Histograms for Shot boundary detection.<br> 
-												5.gpt3.5-turbo for text highlights and summarisation.<br>
-													6.Sentence-BERT embedding and cosine similarity for retrival.<br> 
-															</p>
+												5.gpt3.5-turbo for text highlights and summarisation.<br> 
+													6.Sentence-BERT embedding and cosine similarity for retrieval.<br> 
+								</p>
 							</article>
 							
-							<article class="col-6 col-12-xsmall work-item"><iframe src="https://player.vimeo.com/video/867151514?h=894f69dea9" height="170" class="image fit thumb" allowfullscreen></iframe>
+							<article class="col-6 col-12-xsmall work-item lazy-load"><iframe src="https://player.vimeo.com/video/867151514?h=894f69dea9" height="170" class="image fit thumb" allowfullscreen></iframe>
 								<h3>Crafting Video Snippets</h3>
 								<p>To increase engagement on a live streaming platform, the goal is to identify the most engaging segments from videos, especially since a large number of users drop off within the first 30 seconds. Given the short attention spans of users, particularly Gen Z, the platform aims to enhance the appeal of videos trailers, and mashups. The solution involves both segment identification and the addition of external features to hook users early. A customizable framework will be developed to handle various content types and boost user retention. </p>
 							</article>
@@ -122,12 +158,8 @@
 						<div class="row">
 
 
-						
-							
-
-
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/embc.png" class="image fit thumb"><img src="images/embc.png" scale="40%" alt="" /></a>
+							<article class="col-6 col-12-xsmall work-item lazy-load">
+								<a href="images/embc.png" class="image fit thumb poptrox"><img src="images/embc.png" scale="40%" alt="" /></a>
 								<h3>Delineation of Ischemic Core and Penumbra Volumes from MRI using MMNet Architecture". 41st International Conference of the IEEE Engineering in Medicine and Biology Society, EMBC (2019)</h3>
 								<p>Example results for the respective modalities - blue
 									(predicted segmentation maps) and red (ground truth). Top 4 rows are
@@ -138,8 +170,8 @@
 							
 
 								
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/journal_midline.png" class="image fit thumb"><img src="images/journal_midline.png" scale="40%" alt="" /></a>
+							<article class="col-6 col-12-xsmall work-item lazy-load">
+								<a href="images/journal_midline.png" class="image fit thumb poptrox"><img src="images/journal_midline.png" scale="40%" alt="" /></a>
 								<h3>Quantitative Analysis of Brain Herniation from Non-Contrast CT Images using Deep Learning" Journal of Neuroscience Methods (2022)</h3>
 								<p>Example results. (a) NCCT slices; (b) right (red) and left (green) hemispheres as
 									predicted by U-Net classifier, (c) pdML (red) and odML (green) curves, (d) iML (cyan) and
@@ -147,16 +179,15 @@
 									In this study, a convolutional neural network (CNN) was used to predict the deformed left and right hemispheres. The proposed algorithm was validated with non-contrast computed tomography (NCCT) of (n = 45) subjects with two types of brain hemorrhages - epidural hemorrhage (EDH): (n = 5) and intra-parenchymal hemorrhage (IPH): (n = 40) <a href="https://pubmed.ncbi.nlm.nih.gov/33316319/" target="_blank">[paper]</a> </p>
 							</article>
 
+							<article class="col-6 col-12-xsmall work-item lazy-load">
+								<a href="images/block.png" class="image fit thumb poptrox"><img src="images/block.png" scale="40%" alt="" /></a>
 
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/block.png" class="image fit thumb"><img src="images/block.png" scale="40%" alt="" /></a>
 								<h3> MCA-DN: Multi-path Convolution leveraged Attention Deep Network for Salvageable Tissue Detection". Journal of Computers in Biology and Medicine (2022)</h3>
-								<p>A novel multi-path convolution leveraged attention based deep network (MCA-DN) is proposed to address this challenge. MCA-DN combines multi-path convolution derived attention making different weighted filters in each attention convolution sub-path, with interactions on the same level of abstraction. This facilitates the network to focus on voxels with enhanced weighted activations, directing to a plausible lesion. Such a proposition of acquiring attention by embedding multiple filter paths, also prioritizes the selective activation of multi-parametric MRI sequences. The multi-path convolution assisted attention block allows the network layers to gain more insights on the input tensor, enabling the expansion of hypothesis search space with a controlled parameter count.<a href="https://doi.org/10.1016/j.compbiomed.2021.104724" target="_blank">[paper]</a> </p>
+								<p>A novel multi-path convolution derived attention making different weighted filters in each attention convolution sub-path, with interactions on the same level of abstraction. This facilitates the network to focus on voxels with enhanced weighted activations, directing to a plausible lesion. Such a proposition of acquiring attention by embedding multiple filter paths, also prioritizes the selective activation of multi-parametric MRI sequences. The multi-path convolution assisted attention block allows the network layers to gain more insights on the input tensor, enabling the expansion of hypothesis search space with a controlled parameter count.<a href="https://doi.org/10.1016/j.compbiomed.2021.104724" target="_blank">[paper]</a> </p>
 							</article>
 
-							
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/japan.png" class="image fit thumb"><img src="images/japan.png" scale="40%" alt="" /></a>
+							<article class="col-6 col-12-xsmall work-item lazy-load">
+								<a href="images/japan.png" class="image fit thumb poptrox"><img src="images/japan.png" scale="40%" alt="" /></a>
 								<h3>Exploring faster computations on FPGAs, Research Intern, VDEC Lab, University of Tokyo</h3>
 								<p>Implemented a custom CNN computation engine that took 7 tiled input arrays from CPU branching to 2 kernels, fetched 7 input weights from FPGA DRAM, and calculated the weighted sum. The engine was implemented on Xilinx Vertex -7 chip using MaxCompiler and Verilog software. The clock frequency for the computation engine was around 103MHz in MaxCompiler as compared to 106MHz in Verilog. <a href="https://docs.google.com/presentation/d/1zQ3HSA_Fxd65fKUSlWJrmiRjRUbk6iPiOEUXMMy_H98/edit?usp=sharing" target="_blank">[slides]</a> </p>
 							</article>
@@ -165,8 +196,10 @@
 
 
 						</div>
+
+					</article>
 				<!-- Three -->
-					<section id="three">
+					<article class="lazy-load">
 						<h2>Awards and Achievements</h2>
 							<ol>
 
@@ -204,396 +237,9 @@
 								<b>(Mar 2013) National Talent Search Examination, Govt. of India- Selected as an NTSE scholar, securing in the top 99.7 percentile of students, with a monthly scholarship of Rs 2000, till graduation
 							   </b></a></li>
 						   <br />
-
-
-								
-										    
-								<!-- <a href="https://www.youtube.com/watch?v=OZsWceHOE-A" target="_blank"><b>[Lecture 1]:</b> Machine Learning Fundamentals</a><br />
-								<a href="https://www.youtube.com/watch?v=xZF-YqhL0xE" target="_blank"><b>[Lecture 2]:</b> Implementing Artificial Neural Networks in PyTorch</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="https://www.tiny.cc/coaps_lec2" target="_blank"><b>[Jupyter Notebook 1]</b> </a>  <br />  
-								<a href="https://www.youtube.com/live/l349S4ojdxw" target="_blank"><b>[Lecture 3]:</b> Implementing Convolutional Neural Networks in PyTorch</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="https://www.tiny.cc/coaps_lec3" target="_blank"><b>[Jupyter Notebook 2]</b> </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="https://www.tiny.cc/coaps_html" target="_blank"><b>[Jupyter Notebooks as HTML]</b> </a> <br />
-								<a href="https://www.youtube.com/watch?v=t8iuyScNjwA" target="_blank"><b>[Lecture 4]:</b> Machine Learning Applications in Climate Research</a>
-								</li>
-								<br /> -->
-
-								<!-- <li> Humanity has a plastic problem. Conventional plastic manufacturing is still cheaper, but the greener alternatives, bioplastics in particular, are catching up fast. <a href="https://www.youtube.com/watch?v=6MhPY4UAm7w" target="_blank"><b>Here's a video </b></a> that highlights some really innovative initiatives to manufacture bioplastics from Avocados, Sugarcanes, Mushrooms, and even Algae! Interestingly, the Sugarcane based bioplastic company featured in the video is based quite close to my hometown of Ghaziabad, India.</li>
-								<br /> -->
-								
-								<!-- <li><a href="ncar_plev_interp.html" target="_blank">NCAR Command Language (NCL) pressure interpolation script.</a> Update : NCL is being <a href="https://www.ncl.ucar.edu/Document/Pivot_to_Python/NCL_Pivot_to_Python_Report_and_Roadmap.pdf" target="_blank">pivoted in favor of Python!</a></li>
-								
-								<li><a href="https://www.nature.com/articles/d41586-019-02918-5" target="_blank"><b>Scientific Writing : </b>A Pulitzer prizewinner novelist’s tips on how to write a great science paper.</a></li>										                          <li><a href="https://www.nature.com/articles/d41586-018-06991-0" target="_blank"><b>Peer-Review : </b> A nice article discussing a three-step process to efficiently review a scientific paper.</a></li>
-								
-								<li><a href="https://www.meteo.physik.uni-muenchen.de/~Thomas.Birner/ssw.html" target="_blank"><b>SSW animations : </b>Interesting (read cool!) Potential Vorticity (PV) evolution animations for past stratospheric sudden warming (SSW) events.</a></li><br /> -->
-								<!--<li><a href="https://modes.fmf.uni-lj.si/modal-view-atmospheric-circulation#ES" target="_blank">Atmospheric energy spectrum of the day.</a></li> --->
-								 <!-- <li><b>N<sup>2</sup> climatology : </b> Zonal mean Brunt-Vaisala frequency in the southern hemisphere for <a href='images/N2_Jun2018.png'>June</a>, <a href='images/N2_Jul2018.png'>July</a> and <a href='images/N2_Aug2018.png'>August</a> 2018 computed from ERA5 reanalysis. I wanted to check my gravity wave potential energy computations but couldn't find a reliable source online to compare the southern hemisphere climatology for N<sup>2</sup>. In case you find yourself in a similar situation, your search ends here.</li><br /> -->
-
-								 <!-- <li><b>Linear Algebra Writtens' Workshop: </b>Resources for Fall 2016 Linear Algebra Writtens' Workshop. <a href="http://math.nyu.edu/student_resources/wwiki/index.php/Category:Linear_Algebra" target="_blank">Click here to view the Math Wiki and solutions to past years' problems.</a>
-	                                <ul>
-	                                    <li><a href='writtens/syllabus.pdf' target="_blank">Structure</a></li>
-	                                    <li><a href='writtens/session1.pdf' target="_blank">Session 1 Problems</a></li>
-	                                    <li><a href='writtens/session2.pdf' target="_blank">Session 2 Problems</a></li>
-	                                    <li><a href='writtens/session3.pdf' target="_blank">Session 3 problems</a></li>
-	                                </ul>	
-								</li> -->
+		
 							</ol>
-					</section>
-
-				<!-- (Old) Three --> 
-				<!---
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					--->
-
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
-
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				-->
+					</article>
 
 			</div>
 
@@ -620,6 +266,201 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+            <!-- <script src="assets/js/lazy-load.js"></script> -->
+
+		<!-- Scroll Animation Element -->
+		<!-- <div class="scroll-animation" id="scrollAnimation">
+			<h2>Scroll Animation</h2>
+			<p>This element appears as you scroll!</p>
+		</div> -->
+
+		<script>
+			window.addEventListener('scroll', function() {
+				const scrollPosition = window.scrollY + window.innerHeight; // Current scroll position + viewport height
+				const lazyLoadElements = document.querySelectorAll('.lazy-load');
+
+				lazyLoadElements.forEach((element, index) => {
+					const elementPosition = element.getBoundingClientRect().top + window.scrollY; // Get the element's position
+
+					// Check if the element is in the viewport
+					if (scrollPosition > elementPosition) {
+						// Add a delay of 100ms for each subsequent article
+						element.style.transitionDelay = `${100 * index}ms`; // Delay increases with each article
+						element.classList.add('visible'); // Add visible class to show the element
+					}
+				});
+
+				// Gradient background change logic
+				const maxScroll = document.body.scrollHeight - window.innerHeight;
+				const scrollFraction = window.scrollY / maxScroll;
+
+				const color1 = `rgb(${255 - Math.floor(scrollFraction * 255)}, ${126 + Math.floor(scrollFraction * 129)}, ${95 + Math.floor(scrollFraction * 162)})`;
+				const color2 = `rgb(${255 - Math.floor(scrollFraction * 255)}, ${180 - Math.floor(scrollFraction * 180)}, ${123 - Math.floor(scrollFraction * 123)})`;
+
+				document.getElementById("header").style.background = `linear-gradient(to right, ${color1}, ${color2})`;
+
+				// Scroll animation visibility
+				const scrollAnimation = document.getElementById("scrollAnimation");
+				if (scrollPosition > 100) { // Change 100 to the scroll position where you want the animation to start
+					scrollAnimation.classList.add("visible");
+				} else {
+					scrollAnimation.classList.remove("visible");
+				}
+			});
+		</script>
+
+		<!-- Modal for Image Viewing -->
+		<div class="modal" id="imageModal">
+			<span class="close" id="closeModal">&times;</span>
+			<span class="prev" id="prevImage">&#10094;</span>
+			<span class="next" id="nextImage">&#10095;</span>
+			<img id="modalImage" src="" alt="Zoomed Image" />
+		</div>
+
+		<script>
+			const projectImages = document.querySelectorAll('.project-image');
+			const modal = document.getElementById('imageModal');
+			const modalImage = document.getElementById('modalImage');
+			const closeModal = document.getElementById('closeModal');
+			const prevImage = document.getElementById('prevImage');
+			const nextImage = document.getElementById('nextImage');
+
+			let currentImageIndex = 0;
+
+			// Open modal and show the clicked image
+			projectImages.forEach((image, index) => {
+				image.addEventListener('click', (event) => {
+					event.preventDefault(); // Prevent default action
+					currentImageIndex = index;
+					modalImage.src = image.src; // Set the modal image source to the clicked image
+					modal.style.display = 'flex'; // Show the modal
+					setTimeout(() => {
+						modalImage.classList.add('zoomed'); // Add zoom effect
+					}, 10); // Small timeout to trigger the zoom effect
+				});
+			});
+
+			// Close modal
+			closeModal.addEventListener('click', () => {
+				modal.style.display = 'none'; // Hide the modal
+				modalImage.classList.remove('zoomed'); // Remove zoom effect
+			});
+
+			// Navigate to previous image
+			prevImage.addEventListener('click', () => {
+				currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : projectImages.length - 1;
+				modalImage.src = projectImages[currentImageIndex].src; // Update modal image source
+			});
+
+			// Navigate to next image
+			nextImage.addEventListener('click', () => {
+				currentImageIndex = (currentImageIndex < projectImages.length - 1) ? currentImageIndex + 1 : 0;
+				modalImage.src = projectImages[currentImageIndex].src; // Update modal image source
+			});
+
+			// Close modal when clicking outside the image
+			modal.addEventListener('click', (event) => {
+				if (event.target === modal) {
+					modal.style.display = 'none'; // Hide the modal
+					modalImage.classList.remove('zoomed'); // Remove zoom effect
+				}
+			});
+		</script>
+
+
+
+            <script>
+        // Function to update opacity based on each element's vertical position
+        function updateOpacity() {
+            var lazyLoadElements = document.querySelectorAll('.lazy-load');
+            var windowHeight = window.innerHeight;
+            var targetMargin = 288; // 3 inches in pixels (1 inch ≈ 96 pixels)
+
+            lazyLoadElements.forEach(function(element) {
+                var rect = element.getBoundingClientRect();
+                var elementTop = rect.top; // Distance from the top of the viewport
+                var elementHeight = rect.height; // Height of the element
+
+                // Calculate the trigger point: 3 inches above the bottom of the viewport
+                var triggerPoint = windowHeight - targetMargin;
+
+                // Check if the element is in the viewport
+                var isInViewport = elementTop < windowHeight && (elementTop + elementHeight) > 0;
+
+                if (isInViewport) {
+                    if (elementTop < triggerPoint) {
+                        // Element is above the trigger point: calculate opacity proportionally
+                        var distance = triggerPoint - elementTop;
+                        var opacity = distance / targetMargin;
+                        opacity = Math.min(Math.max(opacity, 0), 1); // Clamp opacity between 0 and 1
+                        element.style.opacity = opacity.toFixed(2);
+                    } else {
+                        // Element is below the trigger point: fully transparent
+                        element.style.opacity = '0';
+                    }
+                } else {
+                    // Element is completely outside the viewport: fully transparent
+                    element.style.opacity = '0';
+                }
+            });
+        }
+
+        // Attach the updateOpacity function to scroll and resize events
+        window.addEventListener('scroll', updateOpacity);
+        window.addEventListener('resize', updateOpacity);
+
+        // Initial call to set opacity on page load
+        document.addEventListener('DOMContentLoaded', updateOpacity);
+    </script>
+
+    //opacity
+
+    <script>
+        // Function to update opacity based on each element's vertical position
+        function updateOpacity() {
+            var lazyLoadElements = document.querySelectorAll('.lazy-load');
+            var windowHeight = window.innerHeight;
+            var targetMargin = 188; 
+
+            lazyLoadElements.forEach(function(element) {
+                var rect = element.getBoundingClientRect();
+                var elementTop = rect.top; // Distance from the top of the viewport
+                var elementHeight = rect.height; // Height of the element
+
+                // Calculate the trigger point: 3 inches above the bottom of the viewport
+                var triggerPoint = windowHeight - targetMargin;
+
+                // Check if the element is in the viewport
+                var isInViewport = elementTop < windowHeight && (elementTop + elementHeight) > 0;
+
+                if (isInViewport) {
+                    if (elementTop < triggerPoint) {
+                        // Element is above the trigger point: calculate opacity proportionally
+                        var distance = triggerPoint - elementTop;
+                        var opacity = distance / targetMargin;
+                        opacity = Math.min(Math.max(opacity, 0), 1); // Clamp opacity between 0 and 1
+                        element.style.opacity = opacity.toFixed(2);
+                    } else {
+                        // Element is below the trigger point: fully transparent
+                        element.style.opacity = '0';
+                    }
+                } else {
+                    // Element is completely outside the viewport: fully transparent
+                    element.style.opacity = '0';
+                }
+            });
+        }
+
+        // Attach the updateOpacity function to scroll and resize events
+        window.addEventListener('scroll', updateOpacity);
+        window.addEventListener('resize', updateOpacity);
+
+        // Initial call to set opacity on page load
+        document.addEventListener('DOMContentLoaded', updateOpacity);
+    </script>
+    
+
+    //opacity_end
 
 	</body>
 </html>
