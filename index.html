@@ -93,6 +93,99 @@
                 max-width: 100%; /* Ensure the image is responsive */
                 height: auto; /* Maintain aspect ratio */
             }
+
+			#slideshow-section {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				background-color: black;
+				overflow: hidden;
+			}
+
+			.slideshow-image {
+				max-width: 100%;
+				height: 200px;
+				opacity: 0;
+				transition: opacity 0.5s ease-in-out;
+				position: absolute;
+			}
+
+			.slideshow-image.visible {
+				opacity: 1;
+			}
+
+			
+			@media (max-width: 768px) {
+				body {
+					font-size: 14px; /* Decrease font size for smaller screens */
+				}
+
+				#header {
+					min-height: 150px; /* Decrease header height for smaller screens */
+					padding: 2em 0; /* Adjust header padding for smaller screens */
+					background-attachment: scroll;
+					background-size: auto, cover;
+					background-position: top left, center center;
+					left: auto;
+					position: relative;
+					text-align: center;
+					top: auto;
+					width: 100%;
+					display: block;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					color: white;
+				}
+
+				#header .inner {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+
+				#header .image.avatar {
+					margin-bottom: 1em; /* Add some spacing below the avatar */
+				}
+
+				.carousel-container {
+					margin-left: 0; /* Remove left margin for smaller screens */
+					margin-right: 0; /* Remove right margin for smaller screens */
+				}
+
+				.carousel {
+					height: 400px; /* Decrease carousel height for smaller screens */
+				}
+
+				.slideshow-image {
+					height: 150px; /* Decrease slideshow image height for smaller screens */
+				}
+
+				.work-item {
+					width: 100%; /* Make work items full width for smaller screens */
+				}
+			}
+
+			@media (max-width: 480px) {
+				body {
+					font-size: 12px; /* Further decrease font size for extra small screens */
+				}
+
+				#header {
+					min-height: 120px; /* Further decrease header height for extra small screens */
+					padding: 1.5em 0; /* Adjust header padding for extra small screens */
+				}
+
+				.carousel {
+					height: 300px; /* Further decrease carousel height for extra small screens */
+				}
+
+				.slideshow-image {
+					height: 100px; /* Further decrease slideshow image height for extra small screens */
+				}
+			}
 		</style>
 		<title>Akshat Gupta - Tech Lead, Machine Learning | Glance InMobi Group |Kaggle Competitions Expert | IIT Kharagpur</title>
 
@@ -171,6 +264,14 @@
 					<a href="#three"><h4>Awards and Achievements</h4></a>
 					<!--<a href="#four"><h4>Links</h4></a>-->
 					<!-- <a href="https://mesreflexions2.wordpress.com/" target="_blank"><h4>Blog</h4></a> -->
+					<section id="slideshow-section">
+						<div class="slideshow-image"></div>
+						<img src="images/j1.webp" alt="Image 1" class="slideshow-image" />
+						<img src="images/iitkgp.jpg" alt="Image 2" class="slideshow-image" />
+						<img src="images/j3.jpg" alt="Image 3" class="slideshow-image" />
+						<img src="images/j4.webp" alt="Image 4" class="slideshow-image" />
+						<img src="images/j5.jpg" alt="Image 5" class="slideshow-image" />
+					</section>
 				</div>
 			</header>
 
@@ -363,6 +464,9 @@
 
 		<script>
 			// <script>
+
+			let slideImageIndex = 0;
+
 			window.addEventListener('scroll', function() {
 				const scrollPosition = window.scrollY + window.innerHeight; // Current scroll position + viewport height
 				const lazyLoadElements = document.querySelectorAll('.lazy-load');
@@ -379,18 +483,19 @@
 				});
 
 				// Slideshow functionality
-				const images = ['images/j1.webp', 'images/iitkgp.jpg', 'images/j3.jpg', 'images/j4.webp', 'images/j5.jpg', 'images/j5.jpg'];
+				const images = document.querySelectorAll('.slideshow-image');
 				const header = document.getElementById("header");
 				const maxScroll = document.body.scrollHeight - window.innerHeight;
 				const scrollFraction = window.scrollY / maxScroll;
 
 				// Calculate the index of the image based on scroll position
 				const imageIndex = Math.floor(scrollFraction * (images.length - 1));
-				header.style.backgroundImage = `url('${images[imageIndex]}')`;
-				header.style.backgroundSize = 'contain';
-				header.style.backgroundRepeat = "no-repeat";
-				header.style.backgroundPositionY = "75%";
-				header.style.border = "5px solid black"; 
+				header.style.backgroundImage = "none";
+				if (imageIndex !== slideImageIndex) {
+					images[slideImageIndex].classList.remove('visible'); // Hide current image
+					slideImageIndex = imageIndex;
+					images[slideImageIndex].classList.add('visible'); // Show new image
+				}
 				
 				// header.style.backgroundColor="gray";
 				
