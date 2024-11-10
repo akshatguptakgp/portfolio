@@ -50,6 +50,25 @@
                 opacity: 1; /* Fully visible when scrolled */
             }
 
+    /* Add this to your existing styles */
+    .custom-icon img {
+        width: 1em;  /* Match font-awesome icon size */
+        height: 1em; /* Match font-awesome icon size */
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .custom-icon {
+        font-size: inherit; /* Inherit font size from parent */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+
 			/*modal
 			/* You can add more gradient styles for other sections as needed */
 
@@ -256,9 +275,9 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="https://amangupta2.github.io/" class="image avatar"><img src="images/akshat.jpeg" alt="" /></a>
+					<a href="https://akshatguptakgp.github.io/portfolio/" class="image avatar"><img src="images/akshat.jpeg" alt="" /></a>
 					<h1><strong>Akshat Gupta</strong><br /></h1>
-					Tech Lead, Machine Learning, Computer Vision Enthusiast<br />
+					Tech Lead ML,Glance InMobi Group<br />
 					<br />
 					<a href="#two"><h4>Projects and Outreach</h4></a>
 					<a href="#three"><h4>Awards and Achievements</h4></a>
@@ -277,7 +296,7 @@
 
 			<script>
 			random = Math.floor(Math.random()*9).toString();
-			pre = "url('assets/css/images/overlay.png'), url('images/bg"
+			pre = "url('assets/css/images/overlay.png'), url('imag1es/bg"
 			url = pre.concat(random,".jpg")
 			document.getElementById("header").style.backgroundImage = url;
 			</script>
@@ -288,13 +307,14 @@
 
 				<!-- One -->
 					<article class="intro visible">
-						<h2 padding: 0>Computer Vision Enthusiast | Kaggle Competitions Expert | IIT Kharagpur</h2>
-						<p>I work as Tech Lead, Machine Learning at <a href="https://glance.inmobi.com/" target="_blank">Glance InMobi Group</a>.</p>
-						<p>I lead a team of 10+ engineers and work on building products using Deep Learning and Computer Vision in two broad domains - Recommendation Systems and Generative AI.</p>
+						<h1 padding: 0>Computer Vision Enthusiast | Kaggle Competitions Expert | IIT Kharagpur</h1>
+						<p>Namaste! Akshat this side. I'm a Deep Learning enthusiast passionate about crafting smart, real-world solutions through cutting-edge AI technologies.</p>
+						<p>I lead a team of 10+ engineers at <a href="https://glance.inmobi.com/" target="_blank">Glance</a>  and work on building products using Deep Learning and Computer Vision in two broad domains - Recommendation Systems and Generative AI.</p>
 						<p>Prior to this, I worked at <a href="https://www.societegenerale.com/en" target="_blank"> Societe Generale </a> as Software Engineer, designing APIs for Datalake to store financial deals made by the company, historize the financial deals to run ML models.</p>
 						<p>I received my Bachelors Degree from the Department of Electrical Engineering, <a href="https://www.ee.iitkgp.ac.in/" target="_blank">Indian Institute of Technology, Kharagpur </a></p>
-						<p><b>Email:</b> I can be reached at : akshat |dot| ag1097 |at| gmail |dot| com, or akshat |dot| gupta [at] inmobi [dot] com</p>
-						<p><b>Please refer to my <a href="https://docs.google.com/document/d/1RHjazQL52NRS8fcT0-Qjx5inPcKjEY4-7-pzeByzzNM/edit?usp=sharing" target="_blank"></b> CV</b></a> and my <a href="https://www.researchgate.net/profile/Akshat-Gupta-13" target="_blank"><b>Research Profile</b></a> and <a href="https://www.kaggle.com/akshatgupta2810" target="_blank">Kaggle Profile </a> for details. Please contact me for access to any of my publications behind a paywall </b></p>
+						<p><b>Please refer to my <a href="https://drive.google.com/file/d/1BL7uYQPlXINUwa0hyav4cCWj_EZmmpVw/view?usp=sharing" target="_blank"> </b> CV</b></a> and 
+							my <a href="https://www.researchgate.net/profile/Akshat-Gupta-13" target="_blank"></b> Research Profile</b></a> 
+							I can be reached at : akshat |dot| ag1097 |at| gmail |dot| com, or akshat |dot| gupta [at] inmobi [dot] com </b></p>
 					</article>
 
 				<!-- Two -->
@@ -312,7 +332,7 @@
 
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/swinir.webp" class="image fit thumb" ><img src="images/swinir.webp" alt="" height="170"/></a>
-								<h3>Image quality improvements with extensive compression - Glance Tech Blog</h3> 
+								<h3>Enhancing Image quality with compression - Glance Tech Blog</h3> 
 								<p>Using SOTA Image Superresolution, the problem statement was how to increase the quality of images while reducing image size. In other words, we want a solution which improves the image quality (sharpness, contrast, etc.) and simultaneously reducing the final size of the image, so that it improves the user experience both ways, and also reduce the cost for storing images</p>
 								<p><a href="https://engg.glance.com/getting-best-of-both-world-image-quality-improvements-with-extensive-image-compression-825cd5604e27" target="_blank">[link]</a>	
 							</article>
@@ -323,21 +343,36 @@
 								<button class="image fit thumb poptrox">
 									<iframe src="https://player.vimeo.com/video/893614428?h=cdb29e89bc" height="170" class="image fit thumb" allowfullscreen></iframe>
 								</button>
-								<h3>Video Clip Generation.</h3>
+								<h3>Generating derivataive content for Videos - Fifth Elephant Conference, Monsoon Track (2023)</h3>
 								<p>
-									1.Faster Whisper using CTranslate2 for audio transcription. <br> 
-									2.BLIP and Git for Image Captioning.<br> 
-										3.Vilt for Visual Question Answering.<br> 
-											4.Color Histograms for Shot boundary detection.<br> 
-												5.gpt3.5-turbo for text highlights and summarisation.<br> 
-													6.Sentence-BERT embedding and cosine similarity for retrieval.<br> 
+									Leveraging advanced tools for AI-driven multimedia processing: Faster Whisper with CTranslate2 enables swift audio transcription, while BLIP and Git handle image captioning. ViLT supports visual question answering, and color histograms aid in shot boundary detection. Text is summarized and highlighted with GPT-3.5-turbo, and Sentence-BERT embeddings with cosine similarity streamline retrieval.
 								</p>
 							</article>
-							
-							<article class="col-6 col-12-xsmall work-item lazy-load"><iframe src="https://player.vimeo.com/video/867151514?h=894f69dea9" height="170" class="image fit thumb" allowfullscreen></iframe>
-								<h3>Crafting Video Snippets</h3>
-								<p>To increase engagement on a live streaming platform, the goal is to identify the most engaging segments from videos, especially since a large number of users drop off within the first 30 seconds. Given the short attention spans of users, particularly Gen Z, the platform aims to enhance the appeal of videos trailers, and mashups. The solution involves both segment identification and the addition of external features to hook users early. A customizable framework will be developed to handle various content types and boost user retention. </p>
+
+
+
+
+							<article class="col-6 col-12-xsmall work-item lazy-load">
+								<button class="image fit thumb poptrox">
+									<iframe src="https://player.vimeo.com/video/867151514?h=894f69dea9" height="170" class="image fit thumb" allowfullscreen></iframe>
+								</button>
+								<h3>Creating short clips from long form videos - Fifth Elephant Conference, Winter Track (Jan 2024)</h3>
+								<p>
+									To increase engagement on a live streaming platform, the goal is to identify the most engaging segments from videos, especially since a large number of users drop off within the first 30 seconds. Given the short attention spans of users, particularly Gen Z, the platform aims to enhance the appeal of videos trailers, and mashups. The solution involves both segment identification and the addition of external features to hook users early. A customizable framework will be developed to handle various content types and boost user retention. 
+								</p>
 							</article>
+
+
+
+
+
+
+
+							
+							<!-- <article class="col-6 col-12-xsmall work-item lazy-load"><iframe src="https://player.vimeo.com/video/867151514?h=894f69dea9" height="170" class="image fit thumb" allowfullscreen></iframe>
+								<h3>Creating short clips from long form videos - Fifth Elephant Conference, Winter Track (Jan 2024)</h3>
+								<p>To increase engagement on a live streaming platform, the goal is to identify the most engaging segments from videos, especially since a large number of users drop off within the first 30 seconds. Given the short attention spans of users, particularly Gen Z, the platform aims to enhance the appeal of videos trailers, and mashups. The solution involves both segment identification and the addition of external features to hook users early. A customizable framework will be developed to handle various content types and boost user retention. </p>
+							</article> -->
 
 						
 
@@ -359,7 +394,7 @@
 								
 							<article class="col-6 col-12-xsmall work-item lazy-load">
 								<a href="images/journal_midline.png" class="image fit thumb poptrox"><img src="images/journal_midline.png" scale="40%" alt="" /></a>
-								<h3>Quantitative Analysis of Brain Herniation from Non-Contrast CT Images using Deep Learning" Journal of Neuroscience Methods (2022)</h3>
+								<h3>Quantitative Analysis of Brain Herniation from Non-Contrast CT Images using Deep Learning <string> Journal of Neuroscience Methods (2022) </b></h3>
 								<p>Example results. (a) NCCT slices; (b) right (red) and left (green) hemispheres as
 									predicted by U-Net classifier, (c) pdML (red) and odML (green) curves, (d) iML (cyan) and
 									odML (green) curves, and (e) iML (cyan) and pdML (red) curves superimposed on NCCT slices. 
@@ -436,6 +471,7 @@
 				<div class="inner">
 					<ul class="icons">
 						<!--<li><a href="https://scholar.google.com/citations?user=fk-F8bsAAAAJ&hl=en" class="icon brands fa-google-scholar"><span class="label">Scholar</span></a></li>-->
+						<!-- <li><a href="https://drive.google.com/file/d/1BL7uYQPlXINUwa0hyav4cCWj_EZmmpVw/view?usp=sharing" class="fa fa-file-text"><span class="label">Github</span></a></li> -->
 						<li><a href="https://github.com/akshatguptakgp" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="mailto:akshat.ag1097@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						<li><a href="https://www.linkedin.com/in/agupta28/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -477,7 +513,7 @@
 					// Check if the element is in the viewport
 					if (scrollPosition > elementPosition) {
 						// Add a delay of 100ms for each subsequent article
-						element.style.transitionDelay = `${20 * index}ms`; // Delay increases with each article
+						element.style.transitionDelay = `${0 * index}ms`; // Delay increases with each article
 						element.classList.add('visible'); // Add visible class to show the element
 					}
 				});
@@ -516,12 +552,12 @@
 		</script>
 
 		<!-- Modal for Image Viewing -->
-		<div class="modal" id="imageModal">
+		<!-- <div class="modal" id="imageModal">
 			<span class="close" id="closeModal">&times;</span>
 			<span class="prev" id="prevImage">&#10094;</span>
 			<span class="next" id="nextImage">&#10095;</span>
 			<img id="modalImage" src="" alt="Zoomed Image" />
-		</div>
+		</div> -->
 
 		<script>
 			const projectImages = document.querySelectorAll('.project-image');
@@ -619,7 +655,6 @@
         document.addEventListener('DOMContentLoaded', updateOpacity);
     </script>
 
-    //opacity
 
     <script>
         // Function to update opacity based on each element's vertical position
@@ -665,8 +700,5 @@
         document.addEventListener('DOMContentLoaded', updateOpacity);
     </script>
     
-
-    //opacity_end
-
 	</body>
 </html>
