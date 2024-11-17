@@ -2651,7 +2651,7 @@ input, select, textarea {
 	#footer {
 		position: fixed; /* Fix the footer to the bottom */
 		bottom: 0; /* Align to the bottom */
-		left: 100px; /* Align to the left */
+		left: 1em; /* Align to the left */
 		width: 100%; /* Full width */
 		display: flex; /* Use flexbox for alignment */
 		justify-content: flex-start; /* Align icons to the left */
@@ -2707,7 +2707,7 @@ input, select, textarea {
 	#main {
 		margin-left: 30%; /* Aman: This should be changed when changing header width size (along with same % in L2688 as well) */
 		max-width: 65em;  /* Aman: This controls the width of the main text paragraph */
-		padding: 8em 4em 4em 4em;
+		padding: 4em 2em 2em 2em;
 		width: calc(100% - 30%); /* Aman: Adjust this width when changing header with in L2607 as well. Also adjust margin-left 3 lines up in L2685 */
 	}
 
