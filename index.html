@@ -26,6 +26,10 @@
 				transition: background 0.5s; /* Smooth transition for background change */
 				width: 100%; /* Full width */
 			}
+			#header a h4 {
+			margin: 0;         /* Remove all margins */
+			padding: 0.5em 0;  /* Add some padding for spacing between links */
+		}
 			#main {
 				flex: 1; /* Allow main content to take available space */
 				padding: 0px; /* Add some padding */
@@ -117,6 +121,10 @@
                 height: auto; /* Maintain aspect ratio */
             }
 
+
+
+
+
 			#slideshow-section {
 				width: 100%;
 				display: flex;
@@ -127,10 +135,11 @@
 
 			.slideshow-image {
 				max-width: 100%;
-				height: 200px;
+				height: 10em;
 				opacity: 0;
 				transition: opacity 0.5s ease-in-out;
 				position: absolute;
+				
 			}
 
 			.slideshow-image.visible {
@@ -139,6 +148,10 @@
 
 			
 			@media (max-width: 768px) {
+				#slideshow-section {
+				display: none;  /* Hide the entire section */
+				height: 0;      /* Collapse the space */
+			}
 				body {
 					font-size: 14px; /* Decrease font size for smaller screens */
 				}
@@ -283,18 +296,19 @@
 			});
 		</script>
 
+
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a href="https://akshatguptakgp.github.io/portfolio/" class="image avatar"><img src="images/akshat.jpeg" alt="" /></a>
 					<h1><strong>Akshat Gupta</strong><br /></h1>
-					Tech Lead ML,Glance InMobi Group<br />
+					Tech Lead ML, Glance InMobi Group<br />
 					<br />
 					<a href="#two"><h4>Projects and Outreach</h4></a>
 					<a href="#three"><h4>Awards and Achievements</h4></a>
 					<!--<a href="#four"><h4>Links</h4></a>-->
 					<!-- <a href="https://mesreflexions2.wordpress.com/" target="_blank"><h4>Blog</h4></a> -->
-					<section id="slideshow-section">
+					<!-- <section id="slideshow-section">
 						<div class="slideshow-image"></div>
 						<img src="images/j1.webp" alt="Image 1" class="slideshow-image" />
 						<img src="images/iitkgp.jpg" alt="Image 2" class="slideshow-image" />
@@ -302,7 +316,7 @@
 						<img src="images/j4.webp" alt="Image 4" class="slideshow-image" />
 						<img src="images/j5.jpg" alt="Image 5" class="slideshow-image" />
 						<img src="images/j5.jpg" alt="Image 5" class="slideshow-image" />
-					</section>
+					</section> -->
 				</div>
 			</header>
 
@@ -321,9 +335,9 @@
 					<article class="intro visible">
 						<h1 padding: 0>Computer Vision Enthusiast | Kaggle Competitions Expert | IIT Kharagpur</h1>
 						<p>Namaste! Akshat this side. I'm a Deep Learning enthusiast passionate about crafting smart, real-world solutions through cutting-edge AI technologies.</p>
-						<p>I lead a team of 10+ engineers at <a href="https://glance.inmobi.com/" target="_blank">Glance</a>  and work on building products using Deep Learning and Computer Vision in two broad domains - Recommendation Systems and Generative AI.</p>
-						<p>Prior to this, I worked at <a href="https://www.societegenerale.com/en" target="_blank"> Societe Generale </a> as Software Engineer, designing APIs for Datalake to store financial deals made by the company, historize the financial deals to run ML models.</p>
-						<p>I received my Bachelors Degree from the Department of Electrical Engineering, <a href="https://www.ee.iitkgp.ac.in/" target="_blank">Indian Institute of Technology, Kharagpur </a></p>
+						<p>I lead a team of 10+ engineers at <a href="https://glance.inmobi.com/" target="_blank">Glance</a>  and work on building products using Deep Learning two broad domains - Recommendation Systems and Generative AI for automated content creation.</p>
+						<p>Prior to this, I worked at <a href="https://www.societegenerale.com/en" target="_blank"> Societe Generale </a> as Software Engineer, designing APIs for Datalake to store financial deals by the company, and historize them to run predictive ML models.</p>
+						<p>I received my Bachelors Degree from the Department of Electrical Engineering, <a href="https://www.iitkgp.ac.in/" target="_blank">Indian Institute of Technology, Kharagpur </a></p>
 						<p><b>Please refer to my <a href="https://drive.google.com/file/d/1BL7uYQPlXINUwa0hyav4cCWj_EZmmpVw/view?usp=sharing" target="_blank"> </b> CV</b></a> and 
 							my <a href="https://www.researchgate.net/profile/Akshat-Gupta-13" target="_blank"></b> Research Profile</b></a> 
 							I can be reached at : akshat |dot| ag1097 |at| gmail |dot| com, or akshat |dot| gupta [at] inmobi [dot] com </b></p>
@@ -336,16 +350,21 @@
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/genai_2024.png" class="image fit thumb poptrox" ><img src="images/genai_2024.png" alt="" height="170"/></a>
-								<h3>Mentor for Gen AI Exchange by Google for Glance Track</h3> 
-								<p>Develop an AI-powered solution that can accurately detect cancer at an early stage using [specific data type, e.g. medical images, genomic data, electronic health records]. The solution should be able to identify high-risk patients and alert healthcare providers for further screening and classify cancer types and stages with high accuracy. The goal is to improve cancer detection rates and enhance patient outcomes through early intervention </p>
+								<h3>Mentor for Gen AI Exchange by Google for Glance Track (Oct 2024)</h3> 
+								<p>Develop an AI-powered solution that can accurately detect cancer at an early stage using 
+									specific data type, e.g. medical images, genomic data, electronic health records.
+									  The goal is to improve cancer detection rates, focussing on technical aspects, product-market fit, and scalability.
+									   through early intervention </p>
 								<p><a href="https://devfolio.co/google-genaiexchange/challenges" target="_blank">[link]</a>	
 							</article>
 
 
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/swinir.webp" class="image fit thumb" ><img src="images/swinir.webp" alt="" height="170"/></a>
-								<h3>Enhancing Image quality with compression - Glance Tech Blog</h3> 
-								<p>Using SOTA Image Superresolution, the problem statement was how to increase the quality of images while reducing image size. In other words, we want a solution which improves the image quality (sharpness, contrast, etc.) and simultaneously reducing the final size of the image, so that it improves the user experience both ways, and also reduce the cost for storing images</p>
+								<h3>Enhancing Image quality - Glance Tech Blog (Sept 2022)</h3> 
+								<p>Using SOTA Image Super-Resolution, the problem statement was how to
+									 increase the quality of images while reducing image size. In other words, we want a solution which improves the image quality (sharpness, contrast, etc.) and simultaneously reducing the final size of the image, 
+									 so that it improves the user experience</p>
 								<p><a href="https://engg.glance.com/getting-best-of-both-world-image-quality-improvements-with-extensive-image-compression-825cd5604e27" target="_blank">[link]</a>	
 							</article>
 
@@ -355,9 +374,15 @@
 								<button class="image fit thumb poptrox">
 									<iframe src="https://player.vimeo.com/video/893614428?h=cdb29e89bc" height="170" class="image fit thumb" allowfullscreen></iframe>
 								</button>
-								<h3>Generating derivataive content for Videos - Fifth Elephant Conference, Monsoon Track (2023)</h3>
+								<h3>Generating derivative content for videos - Fifth Elephant Conference, Monsoon Track (July 2023)</h3>
 								<p>
-									Leveraging advanced tools for AI-driven multimedia processing: Faster Whisper with CTranslate2 enables swift audio transcription, while BLIP and Git handle image captioning. ViLT supports visual question answering, and color histograms aid in shot boundary detection. Text is summarized and highlighted with GPT-3.5-turbo, and Sentence-BERT embeddings with cosine similarity streamline retrieval.
+									Using SOTA speech to text Faster Whisper with CTranslate2 
+									to enable swift audio transcription, while BLIP and Git 
+									to handle image captioning. 
+									ViLT supports visual question answering, 
+									and color histograms aid in shot boundary detection. 
+									Text is summarized and highlighted with GPT-3.5-turbo,
+									 and Sentence-BERT embeddings with cosine similarity streamline retrieval.
 								</p>
 							</article>
 
@@ -422,7 +447,7 @@
 
 							<article class="col-6 col-12-xsmall work-item lazy-load">
 								<a href="images/japan.png" class="image fit thumb poptrox"><img src="images/japan.png" scale="40%" alt="" /></a>
-								<h3>Exploring faster computations on FPGAs, Research Intern, VDEC Lab, University of Tokyo</h3>
+								<h3>Exploring faster computations on FPGAs, Research Intern, VDEC Lab, University of Tokyo (2017)</h3>
 								<p>Implemented a custom CNN computation engine that took 7 tiled input arrays from CPU branching to 2 kernels, fetched 7 input weights from FPGA DRAM, and calculated the weighted sum. The engine was implemented on Xilinx Vertex -7 chip using MaxCompiler and Verilog software. The clock frequency for the computation engine was around 103MHz in MaxCompiler as compared to 106MHz in Verilog. <a href="https://docs.google.com/presentation/d/1zQ3HSA_Fxd65fKUSlWJrmiRjRUbk6iPiOEUXMMy_H98/edit?usp=sharing" target="_blank">[slides]</a> </p>
 							</article>
 
@@ -439,7 +464,7 @@
 							<ol>
 
 								<li>
-									<b>(June 2024) Bond 007 Award, Glance Inmobi Group - Acknowledged as the top 3% performer for consistently pursuing aspirational goals and taking strategic risks along with a cash prize of Rs. 12000
+									<b>(Nov 2024) Bond 007 Award, Glance Inmobi Group - Acknowledged as the top 3% performer for consistently pursuing aspirational goals and taking strategic risks along with a cash prize of Rs. 12000
 								   </b></a></li>
 							   <br />
 
